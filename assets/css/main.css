@@ -1,25 +1,23 @@
-
-
-body {
-  /* Establece la fuente de Google aquÃ­ */
-  margin: 0 auto;
-  font-size: 16px;
-  line-height: 1.71429;
-  background-color: #fff;
-  font-family: 'Raleway', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
 }
-section{
-	text-align: center;
+body {
+  font: 18px Verdana;
+  color: #FFF;
+  background: #CCC;
 }
 
 #container {
   margin: 0px auto;
   width: 640px;
 }
+
 #espacioPuzzle {
   z-index: 1;
   margin: 10px 0 0;
 }
+
 #espacioPuzzle div{
   float: left;
   width: 150px;
@@ -34,8 +32,7 @@ section{
   z-index: 2;
 }
 
-}
-#espacioPuzzle div img {
+#espacioPuzzle div img{
   display: none;
   border-radius: 10px;
   z-index: 3;
