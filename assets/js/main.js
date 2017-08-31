@@ -53,7 +53,6 @@ function playCard(){
 			console.log(trjActual);
 			/*Comparamos las rutas almacenadas en las variables,aqui tomamos las rutas y las alamacenamos en las variable para compararlas*/
 			if (imgAbierta != trjActual) {
-				console.log(trjAbierta);
 				setTimeout(function() {
 					$("#" + id + " img").slideUp('slow');
 					$("#" + trjAbierta + " img").slideUp('slow');
