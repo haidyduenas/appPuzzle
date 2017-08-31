@@ -1,0 +1,12 @@
+td {
+  width: 150px;
+  height: 150px;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+}
+
+table{
+  border-spacing: 10px;
+}
