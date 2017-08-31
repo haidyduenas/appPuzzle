@@ -28,7 +28,6 @@ for (var j = 0; j< 2 ; j++) {
 });
 
 
-
 /* Creamos la funcion que le da la vuelta a las tarjetas*/
 
 function playCard(){
@@ -39,7 +38,7 @@ function playCard(){
 		$("#espacioPuzzle" + " div").off("click", playCard);
 		/*Una función para llamar una vez que la animación se completa, llamada una vez por elemento emparejado.*/
 		$("#" + id + " img").slideDown('slow');
-		/*Implementamos las animaciones*/
+		/*Implementamos las animaciones,cuando las imagenes son diferentes tomamos la ruta de la primera imagen y el id de la segunda,demanera que en la comparacion ambos seran diferentes*/
 		if (imgAbierta == "") {
 			trjAbierta = id;
 			/*obtenemos la ruta de acceso de la primera imagen a la que le hacemos click*/
@@ -47,18 +46,20 @@ function playCard(){
 			console.log(imgAbierta);
 			setTimeout(function() {
 				$("#espacioPuzzle" + " div").on("click", playCard)
-			}, 300);
+			}, 100);
 		} else {
 			/*obtenemos la ruta de acceso de la primera segunda imagen a la que le hacemos click*/
 			trjActual = $("#" + id + " img").attr("src");
-			console.log(imgAbierta);
+			console.log(trjActual);
+			/*Comparamos las rutas almacenadas en las variables,aqui tomamos las rutas y las alamacenamos en las variable para compararlas*/
 			if (imgAbierta != trjActual) {
+				console.log(trjAbierta);
 				setTimeout(function() {
 					$("#" + id + " img").slideUp('slow');
 					$("#" + trjAbierta + " img").slideUp('slow');
 					trjAbierta = "";
 					imgAbierta = "";
-				}, 400);
+				}, 100);
 			} else {
 				$("#" + id + " img").parent().css("visibility", "hidden");
 				$("#" + trjAbierta + " img").parent().css("visibility", "hidden");
@@ -68,7 +69,7 @@ function playCard(){
 			}
 			setTimeout(function() {
 				$("#espacioPuzzle" + " div").on("click", playCard)
-			}, 400);
+			}, 100);
 		}
 	}
 }
